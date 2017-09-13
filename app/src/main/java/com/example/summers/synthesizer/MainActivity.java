@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // wireWidgets();
+        wireWidgets();
         setListeners();
         createMediaPlayers();
         setNoteChoices();
@@ -185,6 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 heNote.seekTo(0);
                 heNote.start();
                 delayPlaying(WHOLE_NOTE/2);
+                break;
             case R.id.button_playtimes:
                 int n = notePicker.getValue();
                 int y = playPicker.getValue();
@@ -250,6 +251,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         delayPlaying(WHOLE_NOTE / 2);
                     }
                 }
+                break;
                     case R.id.button_twinkle:
                         aNote.seekTo(0);
                         aNote.start();
